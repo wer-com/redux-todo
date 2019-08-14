@@ -1,0 +1,199 @@
+*
+{
+    margin:0;
+    padding: 0;
+}
+
+.form
+{
+    border-top:1px solid rgba(0,0,0,0.3);
+    position:fixed;
+    top:90px;
+    background:#fff;
+    width:100%;
+    left:0;
+    height:100vh;
+    z-index:42;
+    display:grid;
+    align-content: center;
+    justify-content: center;
+}
+
+.todo-container
+{
+    width:98vw;
+    margin:10px auto;
+    margin-top:90px;
+    background:#fff;
+}
+
+.todo-item
+{
+    margin-bottom: 10px;
+    padding: 10px;
+    background:#272822;
+    color:#ddd;
+    text-align:center;
+    border-radius:3px;
+    cursor:pointer;
+}
+
+.todo-item:nth-child(2n+1) .name-div
+{
+    color: #764abc;
+}
+
+.name-div
+{
+    color:#f92672;
+    padding:10px;
+}
+
+
+.description-div
+{
+    padding:10px;
+    overflow: auto;
+}
+
+header
+{
+    background:#764abc;
+    color: #f1f1f1;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    height:50px;
+}
+
+.add-toggler
+{
+    position:fixed;
+    top:50px;
+    height:20px;
+    background: #f1f1f1;
+    width:100%;
+    padding:10px;
+    color:#000;
+    display:flex;
+    align-items: center;
+}
+
+.add-todo
+{
+    font-weight: bold;
+    padding-left:20px;
+    position:relative;
+}
+
+.input-toggler div
+{
+    width:20px;
+    height:3px;
+    background:#272822;
+    margin:3px;
+    border-radius: 3px;
+    position:relative;
+}
+
+.input-toggler
+{
+    cursor:pointer;
+}
+
+h2
+{
+    padding: 10px;
+}
+
+textarea
+{
+    resize:none;
+    padding:10px;
+    width:450px;
+    height:400px;
+    border:#764abc 1px solid;
+}
+
+input[type="text"]
+{
+    padding:10px;
+    width:450px;
+    border:#764abc 1px solid;
+}
+
+.input
+{
+    position:relative;
+}
+
+.input::after
+{
+    position:absolute;
+    content:'description';
+    background:white;
+    top:-445px;
+    left:18px;
+    width:90px;
+    text-align:center;
+    color:#764abc;
+}
+
+.input::before
+{
+    position:absolute;
+    content:'name';
+    background:white;
+    top:-503px;
+    left:18px;
+    width:50px;
+    text-align: center;
+    color:#764abc;
+}
+
+.form div div
+{
+    transform:translateY(-100px);
+    padding:10px;
+}
+
+button
+{
+    padding:15px;
+    width:470px;
+    background:#764abc;
+    border:none;
+    color:#f1f1f1;
+    cursor:pointer;
+    transition:0.2s all ease;
+}
+
+button:hover
+{
+    transform:scale(1.05);
+}
+
+.todo-list {
+    margin:0 auto;
+    display:grid;
+}
+
+@media only screen and (min-width: 1000px) {
+    .todo-list {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap:10px;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .todo-list {
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap:10px;
+    }
+}
