@@ -7,7 +7,8 @@ const Form = () =>{
     const dispatch = useDispatch();
     const [todoAdd,setTodoAdd]= useState({
         name:'',
-        description:''
+        description:'',
+        completed:false
     });
 
     const inputHandler = e =>{
@@ -26,9 +27,9 @@ const Form = () =>{
                 <div>
                     <div>
                         <input
-                            placeholder="name"
+                            placeholder="title"
                             type="text"
-                            name="name"
+                            name="title"
                             onChange={inputHandler}/>
                     </div>
                     <div>

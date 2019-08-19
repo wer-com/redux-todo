@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import {Provider} from 'react-redux';
-import {createStore} from 'redux';
+import {applyMiddleware, createStore} from 'redux';
 import {todoReducer} from './reducers/todoReducer';
-import { composeWithDevTools } from "redux-devtools-extension";
+import thunk from 'redux-thunk';
 const store = createStore(
     todoReducer,
-    composeWithDevTools()
+    applyMiddleware(thunk)
 )
 
 ReactDOM.render(

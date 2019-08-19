@@ -38,12 +38,13 @@
     cursor:pointer;
 }
 
-.todo-item:nth-child(2n+1) .name-div
+.name-div-false
 {
     color: #764abc;
+    padding:10px;
 }
 
-.name-div
+.name-div-true
 {
     color:#f92672;
     padding:10px;
@@ -81,6 +82,7 @@ header
     color:#000;
     display:flex;
     align-items: center;
+    z-index:10;
 }
 
 .add-todo
@@ -180,6 +182,13 @@ button:hover
 .todo-list {
     margin:0 auto;
     display:grid;
+}
+
+.x-close
+{
+    width: fit-content;
+    position:absolute;
+    z-index:0;
 }
 
 @media only screen and (min-width: 1000px) {
